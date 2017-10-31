@@ -3,17 +3,17 @@
   <import href="http://schemas.ogf.org/occi/core#/"/>
   <import href="http://schemas.ogf.org/occi/sla#/"/>
   <mixins name="deploy_service" scheme="http://org.eclipse.cmf.occi.qos#" title="Deploy service for a given application">
-    <attributes name="deploy_service.term.type" mutable="true" default="SERVICE">
+    <attributes name="deploy.service.term.type" mutable="true" default="SERVICE">
       <type xsi:type="occi:EnumerationType" href="http://schemas.ogf.org/occi/sla#//@types.2"/>
     </attributes>
-    <attributes name="deploy_service.term.state" mutable="true" default="Undefined">
+    <attributes name="deploy.service.term.state" mutable="true" default="Undefined">
       <type xsi:type="occi:EnumerationType" href="http://schemas.ogf.org/occi/sla#//@types.1"/>
     </attributes>
-    <attributes name="deploy_service.numberComponents" mutable="true" default="0">
+    <attributes name="deploy.service.numberComponents" mutable="true" default="0">
       <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
     </attributes>
-    <attributes name="deploy_service.deploymentStrategy" mutable="true" type="//@types.4"/>
-    <attributes name="deploy_service.throughput" mutable="true" default="0" description="The maximum throughput that be achieved by a given system.">
+    <attributes name="deploy.service.deploymentStrategy" mutable="true" type="//@types.4"/>
+    <attributes name="deploy.service.throughput" mutable="true" default="0" description="The maximum throughput that be achieved by a given system.">
       <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
     </attributes>
     <actions name="computeThroughput" scheme="http://org.eclipse.cmf.occi.qos/deploy_service/action#"/>

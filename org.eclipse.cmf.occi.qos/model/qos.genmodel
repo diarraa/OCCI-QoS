@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2015-2017 Obeo, Inria&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#x9;&#xA;Contributors:&#xA;- William Piers &lt;william.piers@obeo.fr>&#xA;- Philippe Merle &lt;philippe.merle@inria.fr>&#xA;- Faiez Zalila &lt;faiez.zalila@inria.fr>" modelDirectory="/org.eclipse.cmf.occi.qos/src-gen" editDirectory="/org.eclipse.cmf.occi.qos.edit/src-gen" editorDirectory="/org.eclipse.cmf.occi.qos.editor/src-gen" modelPluginID="org.eclipse.cmf.occi.qos" modelName="Qos" testsDirectory="/org.eclipse.cmf.occi.qos.tests/src" complianceLevel="8.0" copyrightFields="false" editPluginID="org.eclipse.cmf.occi.qos.edit" editorPluginID="org.eclipse.cmf.occi.qos.editor" testsPluginID="org.eclipse.cmf.occi.qos.tests" operationReflection="true">
+  <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
+    <details key="Use Delegates" value="false"/>
+  </genAnnotations>
+  <foreignModel>qos.ecore</foreignModel>
+  <genPackages prefix="Qos" basePackage="org.eclipse.cmf.occi" disposableProviderFactory="true">
+    <ecorePackage href="qos.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//ResConsumption"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//ResConsumption/resName"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//ResConsumption/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//Profile"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="qos.ecore#//Profile/profileValues"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//Component"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Component/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="qos.ecore#//Component/profile"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//GroupComponent"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="qos.ecore#//GroupComponent/groupcomponentValues"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//Strategy"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="qos.ecore#//Strategy/strategyValues"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//Deploy_service"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Deploy_service/deployServiceTermType"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Deploy_service/deployServiceTermState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Deploy_service/deployServiceNumberComponents"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="qos.ecore#//Deploy_service/deployServiceDeploymentStrategy"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Deploy_service/deployServiceThroughput"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="qos.ecore#//Deploy_service/computethroughput"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="qos.ecore#//Latency"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Latency/latencyTermType"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Latency/latencyTermState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="qos.ecore#//Latency/latencyMean"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="qos.ecore#//Latency/computelatency"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel#//sla"/>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel#//occi"/>
+</genmodel:GenModel>

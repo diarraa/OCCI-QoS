@@ -4,6 +4,13 @@
     <semanticResources>model/qos.occie</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/core</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/sla</semanticResources>
+    <semanticResources>model/qos.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore</semanticResources>
+    <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
+    <semanticResources>model/qos.genmodel</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_27XjEKT2EeeKIKbCzIEq4A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_3M-3gKT2EeeKIKbCzIEq4A" name="qos" repPath="#_3M4J0KT2EeeKIKbCzIEq4A">
@@ -1930,7 +1937,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']/@ownedRepresentations[name='Extension%20diagram']/@defaultLayer/@containerMappings[name='MixinContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']/@ownedRepresentations[name='Extension%20diagram']/@defaultLayer/@containerMappings[name='MixinContainer']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_FZ84IKkLEeeKIKbCzIEq4A" name="deploy_service.term.type: AgreementTermType=SERVICE">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_FZ84IKkLEeeKIKbCzIEq4A" name="deploy.service.term.type: AgreementTermType=SERVICE">
         <target xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.0"/>
         <semanticElements xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.0"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_FaDl0KkLEeeKIKbCzIEq4A" labelSize="10" labelAlignment="LEFT" labelPosition="node">
@@ -1938,7 +1945,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']/@ownedRepresentations[name='Extension%20diagram']/@defaultLayer/@containerMappings[name='MixinContainer']/@subNodeMappings[name='MixinAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oCL3cKkLEeeKIKbCzIEq4A" name="deploy_service.term.state: AgreementStatus=Undefined">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oCL3cKkLEeeKIKbCzIEq4A" name="deploy.service.term.state: AgreementStatus=Undefined">
         <target xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.1"/>
         <semanticElements xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.1"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_oCQI4KkLEeeKIKbCzIEq4A" labelSize="10" labelAlignment="LEFT" labelPosition="node">
@@ -1946,7 +1953,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']/@ownedRepresentations[name='Extension%20diagram']/@defaultLayer/@containerMappings[name='MixinContainer']/@subNodeMappings[name='MixinAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GxrqoKkMEeeKIKbCzIEq4A" name="deploy_service.numberComponents: Integer=0">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GxrqoKkMEeeKIKbCzIEq4A" name="deploy.service.numberComponents: Integer=0">
         <target xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.2"/>
         <semanticElements xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.2"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_3mj-QKzPEeeGgOHQcz0HIw" labelSize="10" labelAlignment="LEFT" labelPosition="node">
@@ -1954,7 +1961,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']/@ownedRepresentations[name='Extension%20diagram']/@defaultLayer/@containerMappings[name='MixinContainer']/@subNodeMappings[name='MixinAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6ow6kKkXEeeKIKbCzIEq4A" name="deploy_service.deploymentStrategy: Strategy">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_6ow6kKkXEeeKIKbCzIEq4A" name="deploy.service.deploymentStrategy: Strategy">
         <target xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.3"/>
         <semanticElements xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.3"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_6oz94KkXEeeKIKbCzIEq4A" labelSize="10" labelAlignment="LEFT" labelPosition="node">
@@ -1962,7 +1969,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']/@ownedRepresentations[name='Extension%20diagram']/@defaultLayer/@containerMappings[name='MixinContainer']/@subNodeMappings[name='MixinAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_CxiYgKkYEeeKIKbCzIEq4A" name="deploy_service.throughput: Integer=0">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_CxiYgKkYEeeKIKbCzIEq4A" name="deploy.service.throughput: Integer=0">
         <target xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.4"/>
         <semanticElements xmi:type="occi:Attribute" href="model/qos.occie#//@mixins[term='deploy_service']/@attributes.4"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_Cxi_kKkYEeeKIKbCzIEq4A" labelSize="10" labelAlignment="LEFT" labelPosition="node">
