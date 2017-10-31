@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated at Mon Oct 30 18:12:52 CET 2017 from platform:/resource/org.eclipse.cmf.occi.qos/model/qos.occie by org.eclipse.cmf.occi.core.gen.xml -->
+<occi:extension xmlns:occi="http://schemas.ogf.org/occi"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.ogf.org/occi occi.xsd"
+    name="qos"
+    scheme="http://org.eclipse.cmf.occi.qos#"
+    version="1"
+    status="stable">
+
+  <!-- Mixin: Deploy service for a given application -->
+  <occi:mixin term="deploy_service" scheme="http://org.eclipse.cmf.occi.qos#" title="Deploy service for a given application">
+    <occi:depends term="agreement_term" scheme="http://schemas.ogf.org/occi/sla#"/>
+    <occi:attribute name="deploy_service.term.type" use="optional" default="SERVICE" type="xs:string" title=""/>
+    <occi:attribute name="deploy_service.term.state" use="optional" default="Undefined" type="xs:string" title=""/>
+    <occi:attribute name="deploy_service.numberComponents" use="optional" default="" type="xs:integer" title=""/>
+    <occi:attribute name="deploy_service.deploymentStrategy" use="optional" type="xs:string" title=""/>
+    <occi:attribute name="deploy_service.throughput" use="optional" default="" type="xs:integer" title="The maximum throughput that be achieved by a given system."/>
+    <occi:action term="computethroughput" scheme="http://org.eclipse.cmf.occi.qos/deploy_service/action#" title="">
+    </occi:action>
+  </occi:mixin>
+
+  <!-- Mixin: Mean latency for a request -->
+  <occi:mixin term="latency" scheme="http://org.eclipse.cmf.occi.qos#" title="Mean latency for a request">
+    <occi:depends term="agreement_term" scheme="http://schemas.ogf.org/occi/sla#"/>
+    <occi:attribute name="latency.term.type" use="optional" default="SLO" type="xs:string" title="A service level objective"/>
+    <occi:attribute name="latency.term.state" use="optional" default="Undefined" type="xs:string" title=""/>
+    <occi:attribute name="latency.mean" use="optional" default="0" type="xs:integer" title="The average latency of a given distributed application"/>
+    <occi:action term="computelatency" scheme="http://org.eclipse.cmf.occi.qos/latency/action#" title="">
+    </occi:action>
+  </occi:mixin>
+
+</occi:extension>

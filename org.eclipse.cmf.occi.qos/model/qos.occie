@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="qos" scheme="http://org.eclipse.cmf.occi.qos#">
+  <import href="http://schemas.ogf.org/occi/core#/"/>
+  <import href="http://schemas.ogf.org/occi/sla#/"/>
+  <mixins name="deploy_service" scheme="http://org.eclipse.cmf.occi.qos#" title="Deploy service for a given application">
+    <attributes name="deploy_service.term.type" mutable="true" default="SERVICE">
+      <type xsi:type="occi:EnumerationType" href="http://schemas.ogf.org/occi/sla#//@types.2"/>
+    </attributes>
+    <attributes name="deploy_service.term.state" mutable="true" default="Undefined">
+      <type xsi:type="occi:EnumerationType" href="http://schemas.ogf.org/occi/sla#//@types.1"/>
+    </attributes>
+    <attributes name="deploy_service.numberComponents" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="deploy_service.deploymentStrategy" mutable="true" type="//@types.4"/>
+    <attributes name="deploy_service.throughput" mutable="true" default="0" description="The maximum throughput that be achieved by a given system.">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <actions name="computeThroughput" scheme="http://org.eclipse.cmf.occi.qos/deploy_service/action#"/>
+    <depends href="http://schemas.ogf.org/occi/sla#//@mixins[term='agreement_term']"/>
+  </mixins>
+  <mixins name="latency" scheme="http://org.eclipse.cmf.occi.qos#" title="Mean latency for a request">
+    <attributes name="latency.term.type" mutable="true" default="SLO" description="A service level objective">
+      <type xsi:type="occi:EnumerationType" href="http://schemas.ogf.org/occi/sla#//@types.2"/>
+    </attributes>
+    <attributes name="latency.term.state" mutable="true" default="Undefined">
+      <type xsi:type="occi:EnumerationType" href="http://schemas.ogf.org/occi/sla#//@types.1"/>
+    </attributes>
+    <attributes name="latency.mean" mutable="true" default="0" description="The average latency of a given distributed application">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <actions name="computeLatency" scheme="http://org.eclipse.cmf.occi.qos/latency/action#" title=""/>
+    <depends href="http://schemas.ogf.org/occi/sla#//@mixins[term='agreement_term']"/>
+  </mixins>
+  <types xsi:type="occi:RecordType" name="ResConsumption">
+    <recordFields name="resName" mutable="true" description="The name of a resource">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </recordFields>
+    <recordFields name="value" mutable="true" default="0" description="The consumption of a resource">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </recordFields>
+  </types>
+  <types xsi:type="occi:ArrayType" name="Profile" type="//@types.0"/>
+  <types xsi:type="occi:RecordType" name="Component">
+    <recordFields name="name" mutable="true" description="Component name">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </recordFields>
+    <recordFields name="profile" mutable="true" description="a component profil" type="//@types.1"/>
+  </types>
+  <types xsi:type="occi:ArrayType" name="GroupComponent" type="//@types.2"/>
+  <types xsi:type="occi:ArrayType" name="Strategy" type="//@types.3"/>
+</occi:Extension>
